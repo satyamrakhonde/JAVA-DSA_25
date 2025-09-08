@@ -12,5 +12,13 @@ public class Names {
         for (String name : employeeNames) {
             System.out.println(name);
         }
+
+        HashSet<String> employees = new HashSet<>();
+        employees.add("Hritik");
+        employees.add("Hritik mukherjee");
+
+        for (String name : employees) {
+            System.out.println(name);
+        }
     }
 }

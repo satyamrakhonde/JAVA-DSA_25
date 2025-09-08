@@ -6,7 +6,7 @@ import java.util.HashSet;
 //Distinct Element in an Array. PRint Unique elements
 //arr [] = {12, 10, 9, 45, 2, 10, 10, 45}
 //Output = {12, 10, 9, 45, 2};
-
+// ArrayList<Integer> un = new ArrayList<>(Arrays.asList(1, 2, 3));
 public class DisntinctElement {
 
     public static void main(String[] args) {
@@ -20,7 +20,6 @@ public class DisntinctElement {
                     isUnique = true;
                     break;
                 }
-
             }
 
             if (!isUnique) {
