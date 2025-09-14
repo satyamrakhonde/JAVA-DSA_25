@@ -7,13 +7,13 @@ public class IsSubsequence {
         int n = s1.length();
         int m = s2.length();
         int i = 0, j = 0;
-
         while (i < n && j < m) {
-            if (s1.charAt(i) == s2.charAt(j))
+            if (s1.charAt(i) == s2.charAt(j)) {
                 i++;
+            }
             j++;
         }
-
+        System.out.println(i + " " + n);
         if (i == n)
             System.out.println("true");
     }

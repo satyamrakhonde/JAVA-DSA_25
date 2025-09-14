@@ -9,5 +9,6 @@ public class AllSubstring {
                 System.out.println(s.substring(i, j));
             }
         }
+
     }
 }
