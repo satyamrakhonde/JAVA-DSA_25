@@ -5,6 +5,7 @@ public class FirstNonRepeatingCharacter {
 
     public static void main(String[] args) {
         String word = "geeksforgeeks";
+
         HashMap<Character, Integer> firstnonRepChar = new LinkedHashMap<>();
 
         for (char arr : word.toCharArray()) {
