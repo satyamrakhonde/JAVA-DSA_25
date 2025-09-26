@@ -65,25 +65,49 @@ public class SlidingWindow {
         // System.out.println(Arrays.toString(averageSum));
 
         // Count SubArray of Size k with Sum >= Target
-        int[] arr = { 2, 1, 5, 2, 8 };
-        int n = arr.length;
-        int k = 3;
-        int target = 7;
-        int count = 0, sum = 0, l = 0, r = 0;
+        // int[] arr = { 2, 1, 5, 2, 8 };
+        // int n = arr.length;
+        // int k = 3;
+        // int target = 7;
+        // int count = 0, sum = 0, l = 0, r = 0;
 
-        while (r < n) {
-            sum = sum + arr[r];
+        // while (r < n) {
+        // sum = sum + arr[r];
 
-            if (r - l + 1 == k) {
-                if (sum >= target) {
-                    count++;
-                }
-                sum = sum - arr[l];
-                l++;
-            }
-            r++;
-        }
-        System.out.println("The number of SubArray having sum greater than target : " + count);
+        // if (r - l + 1 == k) {
+        // if (sum >= target) {
+        // count++;
+        // }
+        // sum = sum - arr[l];
+        // l++;
+        // }
+        // r++;
+        // }
+        // System.out.println("The number of subarrays with sum ≥ target = " + count);
+
+        // Maximum of All SubArray of Size k
+        // Input: arr = [1, 3, -1, -3, 5, 3, 6, 7], k = 3
+        // Output: [3, 3, 5, 5, 6, 7]
+        // (Explanation: First window [1,3,-1] → max=3, next [3,-1,-3] → max=3, etc.)
+
+        // int[] arr = { 1, 3, -1, -3, 5, 3, 6, 7};
+        // int n = arr.length;
+        // int k = 3;
+        // int target = 7;
+        // int count = 0, sum = 0, l = 0, r = 0;
+        // int[] output = new int[n - k + 1];
+        // while(r < n) {
+
+        // sum = sum + arr[r];
+
+        // if(r + l -1== k) {
+        // sum =sum - arr[l];
+        // l++;
+        // }
+        // r++;
+        // }
+
+        // This above question is separately handled in MaxSubArrayDeque.java
     }
 
 }
