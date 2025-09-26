@@ -43,26 +43,47 @@ public class SlidingWindow {
         // }
         // System.out.println("Minimum Sum : " + minSum);
 
-        // Average Of All SubArrays of Size k
-        int[] average = { 1, 3, 2, 6, -1, 4, 1, 8, 2 };
-        int k3 = 5;
-        int n3 = average.length;
-        int l3 = 0, r3 = 0, avg = 0, windowSum3 = 0;
-        double[] averageSum = new double[n3 - k3 + 1];
+        // // Average Of All SubArrays of Size k
+        // int[] average = { 1, 3, 2, 6, -1, 4, 1, 8, 2 };
+        // int k3 = 5;
+        // int n3 = average.length;
+        // int l3 = 0, r3 = 0, avg = 0, windowSum3 = 0;
+        // double[] averageSum = new double[n3 - k3 + 1];
 
-        while (r3 < n3) {
-            windowSum3 = windowSum3 + average[r3];
+        // while (r3 < n3) {
+        // windowSum3 = windowSum3 + average[r3];
 
-            if (r3 - l3 + 1 == k3) {
-                double windowAverage = (double) windowSum3 / k3;
-                averageSum[l3] = windowAverage;
-                windowSum3 = windowSum3 - average[l3];
-                l3++;
+        // if (r3 - l3 + 1 == k3) {
+        // double windowAverage = (double) windowSum3 / k3;
+        // averageSum[l3] = windowAverage;
+        // windowSum3 = windowSum3 - average[l3];
+        // l3++;
+        // }
+        // r3++;
+        // }
+
+        // System.out.println(Arrays.toString(averageSum));
+
+        // Count SubArray of Size k with Sum >= Target
+        int[] arr = { 2, 1, 5, 2, 8 };
+        int n = arr.length;
+        int k = 3;
+        int target = 7;
+        int count = 0, sum = 0, l = 0, r = 0;
+
+        while (r < n) {
+            sum = sum + arr[r];
+
+            if (r - l + 1 == k) {
+                if (sum >= target) {
+                    count++;
+                }
+                sum = sum - arr[l];
+                l++;
             }
-            r3++;
+            r++;
         }
-
-        System.out.println(Arrays.toString(averageSum));
+        System.out.println("The number of SubArray having sum greater than target : " + count);
     }
 
 }
