@@ -2,7 +2,9 @@
 // Input: arr = [1, 3, -1, -3, 5, 3, 6, 7], k = 3
 // Output: [3, 3, 5, 5, 6, 7]
 // (Explanation: First window [1,3,-1] → max=3, next [3,-1,-3] → max=3, etc.)
-package Arrays.Chatgpt_Questions.Day3;
+
+//In this appraoch we have chosen sliding window + Deque better time complexity
+package Arrays.Chatgpt_Questions.Day3.SlidingWindowProblems;
 
 import java.util.ArrayDeque;
 import java.util.ArrayList;
