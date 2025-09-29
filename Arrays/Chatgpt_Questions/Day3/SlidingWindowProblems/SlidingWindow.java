@@ -1,4 +1,4 @@
-package Arrays.Chatgpt_Questions.Day3;
+package Arrays.Chatgpt_Questions.Day3.SlidingWindowProblems;
 
 import java.util.Arrays;
 
