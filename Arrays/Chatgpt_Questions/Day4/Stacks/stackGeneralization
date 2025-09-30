@@ -1,0 +1,121 @@
+STACK PATTERNS: Generalized
+1️⃣ Parentheses / String Stack Pattern
+
+Goal: Check balance, remove invalid characters, or build valid strings.
+
+Problem Examples:
+Valid Parentheses (LC 20)
+Min Add to Make Parentheses Valid (LC 921)
+Remove Adjacent Duplicates (LC 1047)
+
+
+General Pattern / Steps:
+
+Traverse the string/array
+Push “open” symbols or characters onto stack
+Pop from stack when you find a matching “close” symbol
+For removals or counts: use stack size or top to determine what to remove/keep
+Edge: if stack empty → unbalanced or default value
+
+
+
+Key Intuition:
+
+Stack keeps unmatched items
+Helps process LIFO (last in first out) problems in strings
+
+
+2️⃣ Monotonic Stack Pattern
+
+Goal: Find next/previous greater/smaller element efficiently
+
+Problem Examples:
+Next Greater Element I / II
+Next Smaller Element
+Daily Temperatures
+Stock Span Problem
+Largest Rectangle in Histogram
+
+
+
+General Pattern / Steps:
+Decide direction: left → right, right → left
+Decide stack type: decreasing or increasing (monotonic)
+
+Traverse array:
+While stack not empty AND current number breaks monotonicity → pop elements
+Update map/result for popped elements
+Push current element (or index) onto stack
+Optional: circular array → loop twice or use modulo
+
+
+Key Intuition:
+Stack holds elements whose next/previous “special” element hasn’t been found yet
+Always maintain monotonic order
+Pop only when current element satisfies the condition (greater/smaller)
+
+
+
+3️⃣ Stack Design / Min Stack Pattern
+Goal: Maintain extra info like min/max in O(1) while doing push/pop
+
+Problem Examples:
+Min Stack (LC 155)
+Implement Stack using Queues
+
+
+General Pattern / Steps:
+Use extra stack or pair to store auxiliary info (min, max, count)
+On push: update both main stack and auxiliary stack
+On pop: remove from both
+On query: peek top of auxiliary stack for min/max
+
+
+Key Intuition:
+Stack can be augmented with additional info
+Never traverse to find min/max → store dynamically
+
+
+4️⃣ Simulation / Special Processing Pattern
+Goal: Solve problems where stack simulates a process or collision
+
+
+Problem Examples:
+Asteroid Collision (LC 735)
+Remove K Digits (LC 402)
+132 Pattern (LC 456)
+
+
+General Pattern / Steps:
+Traverse array/sequence
+Use stack to keep track of “active elements”
+While condition fails (collision / smaller / invalid) → pop or remove
+Push current element if valid / survives
+Return final stack as result
+
+
+Key Intuition:
+Stack represents the “state” of the sequence so far
+Pop when new element changes the state
+Commonly used in greedy decisions
+
+
+✅ TL;DR – How to recognize pattern
+Pattern	Recognize it by	Stack use
+Parentheses / String	Balance / matching / removal	Track unmatched symbols
+Monotonic Stack	Next/prev greater/smaller	Track “waiting” elements in decreasing/increasing order
+Stack Design	Maintain min/max or special query	Augment stack with auxiliary info
+Simulation / Special	Sequence/state changes, collisions	Stack represents current state, pop when invalid
+
+💡 Pro tip:
+Whenever you see a problem with:
+
+“Next greater / smaller” → Monotonic stack
+
+“Valid parentheses / removal” → String/Parentheses stack
+
+“Min / max retrieval” → Design / augmented stack
+
+“Collisions / greedy processing” → Simulation stack
+
+You can immediately think “stack to store active or waiting elements”.
