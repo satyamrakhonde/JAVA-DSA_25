@@ -22,10 +22,10 @@ public class MergeTwoSortedArrays {
                 ar3[k++] = ar2[j++];
         }
 
-        if (i < n1)
+        while (i < n1)
             ar3[k++] = ar1[i++];
 
-        if (j < n2)
+        while (j < n2)
             ar3[k++] = ar2[j++];
 
         // for (int m = 0; m < ar3.length; m++) {

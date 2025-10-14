@@ -4,17 +4,18 @@ public class RemoveAllOccurrenceOfChar {
         String s = "ababca";
         char ch = 'a';
 
-        s.replace(String.valueOf(ch), "");
+        s.replace(String.valueOf(ch), " ");
+        System.out.println(s.toString());
 
         // 2nd Approach
-        // StringBuilder s1 = new StringBuilder(s);
+        StringBuilder s1 = new StringBuilder(s);
 
-        // for (int i = 0; i < s1.length(); i++) {
-        // if (ch == s1.charAt(i)) {
-        // s1.deleteCharAt(i);
-        // }
-        // }
-        // System.out.println(s1.toString());
+        for (int i = 0; i < s1.length(); i++) {
+            if (ch == s1.charAt(i)) {
+                s1.deleteCharAt(i);
+            }
+        }
+        System.out.println(s1.toString());
 
         String s3 = "abcbas";
         char c = 'c';

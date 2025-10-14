@@ -28,7 +28,7 @@ public class RotateArray {
         // arr[j] = arr[j + 1];
         // }
         // arr[n - 1] = first;
-        // }
         // System.out.println(Arrays.toString(arr));
+        // }
     }
 }
