@@ -3,6 +3,7 @@ package Arrays.SubArray;
 import java.util.ArrayList;
 import java.util.HashMap;
 
+//How many distinct(different) elements are ther in the fixed window
 public class CountDistinct {
     public static void main(String[] args) {
 
